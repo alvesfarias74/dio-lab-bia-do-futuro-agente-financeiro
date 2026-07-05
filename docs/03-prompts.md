@@ -1,5 +1,16 @@
 # Prompts do Agente
 
+> [!TIP]
+> **Prompt usado nesta etapa:**
+> ```
+> Crie um system prompt para um agente chamado "Edu", um educador financeiro.
+> Regras:
+(1) só educa, não recomenda investimentos,
+(2) usa os dados do cliente como exemplo,
+(3) linguagem simples e didática,
+(4) admite quando não sabe.
+> Inclua 3 exemplos de interação e 2 edge cases.
+
 ## System Prompt
 
 ```text
@@ -207,4 +218,4 @@ Não posso garantir rendimentos futuros — nenhum investimento oferece garantia
 
 > Registre aqui ajustes que você fez nos prompts e por quê.
 
-- Registramos diferenças significativas no comportamento de diferentes LLMs ao utilizar o mesmo System Prompt. Ao testar com ChatGPT, Copilot e Claude, observamos que todos apresentaram respostas competentes, porém com padrões e estilos distintos. O ChatGPT, em particular, não tratou corretamente o Edge Case de "Pergunta fora do escopo" (ex: "Qual a previsão do tempo para amanhã?"), enquanto os demais modelos redirecionaram a conversa de forma adequada.
+- Registramos diferenças significativas no comportamento de diferentes LLMs ao utilizar o mesmo System Prompt. Ao testar com ChatGPT, Copilot e Claude, observamos que todos apresentaram respostas ompetentes, porém com padrões e estilos distintos. O ChatGPT, em particular, não tratou corretamente o Edge Case de "Pergunta fora do escopo" (ex: "Qual a previsão do tempo para amanhã?"), enquanto os demais modelos redirecionaram a conversa de forma adequada.
