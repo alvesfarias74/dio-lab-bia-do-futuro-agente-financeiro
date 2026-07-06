@@ -1,119 +1,33 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🎓 Edu - Educador Financeiro Inteligente
 
-## Contexto
-
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+O **Edu** é um agente de inteligência artificial de perfil puramente consultivo e educacional, desenvolvido para desmistificar o universo das finanças pessoais. Ele traduz termos técnicos do mercado financeiro de forma didática, amigável e acessível, utilizando os dados reais do próprio usuário para contextualizar explicações práticas e personalizadas.
 
 ---
 
-## O Que Você Deve Entregar
+## 🛠️ Arquitetura e Funcionamento
 
-### 1. Documentação do Agente
+O projeto integra uma interface interativa baseada em **Streamlit** com processamento local através do **Ollama** utilizando o modelo `gpt-oss`, consumindo bases de dados mockadas em formatos JSON e CSV para alimentar o contexto do cliente.
 
-Defina **o que** seu agente faz e **como** ele funciona:
+```mermaid
+flowchart TD
+    A[Usuário] --> B["Streamlit (Interface Visual)"]
+    B --> C[Ollama - LLM local]
+    C --> D[Base de Conhecimento]
+    D --> C
+    C --> E[Validação de Escopo & Segurança]
+    E --> F[Resposta Didática do Edu]
+```
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
-
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
-
----
-
-### 2. Base de Conhecimento
-
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
-
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+Para mais detalhes sobre a arquitetura e diretrizes de design do agente, consulte a [Documentação do Agente](./docs/01-documentacao-agente.md).
 
 ---
 
-### 3. Prompts do Agente
-
-Documente os prompts que definem o comportamento do seu agente:
-
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
-
----
-
-### 4. Aplicação Funcional
-
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
-
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
-## Estrutura do Repositório
+## 📂 Estrutura de Arquivos e Documentação
 
 ```
-📁 lab-agente-financeiro/
+📁 dio-lab-bia-do-futuro-agente-financeiro/
 │
-├── 📄 README.md
+├── 📄 README.md                      # Documento principal explicativo do projeto
 │
 ├── 📁 data/                          # Dados mockados para o agente
 │   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
@@ -129,7 +43,8 @@ Todas as ferramentas abaixo possuem versões gratuitas:
 │   └── 05-pitch.md                   # Roteiro do pitch
 │
 ├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
+│   ├── app.py                        # Protótipo Streamlit
+│   └── README.md                     # Guia de execução rápida e setup do Ollama
 │
 ├── 📁 assets/                        # Imagens e diagramas
 │   └── ...
@@ -138,12 +53,58 @@ Todas as ferramentas abaixo possuem versões gratuitas:
     └── README.md
 ```
 
+### Links Rápidos de Acesso
+
+*   **Documentação Central**:
+    *   [docs/01-documentacao-agente.md](./docs/01-documentacao-agente.md): Detalhamento do caso de uso, persona, tom de voz, regras anti-alucinação e diagramas.
+    *   [docs/02-base-conhecimento.md](./docs/02-base-conhecimento.md): Estratégia de carregamento de dados (JSON/CSV) e montagem do contexto.
+    *   [docs/03-prompts.md](./docs/03-prompts.md): Engenharia de prompts (*Few-Shot*, *System Prompt* e tratamentos de casos de borda).
+    *   [docs/04-metricas.md](./docs/04-metricas.md): Critérios de avaliação, cenários de testes de qualidade e formulários de feedback.
+    *   [docs/05-pitch.md](./docs/05-pitch.md): Estrutura do pitch e roteiro de apresentação do agente.
+
+*   **Código e Protótipo**:
+    *   [src/app.py](./src/app.py): Código-fonte principal da aplicação web interativa em Streamlit.
+    *   [src/README.md](./src/README.md): Guia de execução rápida e configuração do Ollama.
+
+*   **Bases de Dados (Mock)**:
+    *   [data/perfil_investidor.json](./data/perfil_investidor.json)
+    *   [data/transacoes.csv](./data/transacoes.csv)
+    *   [data/historico_atendimento.csv](./data/historico_atendimento.csv)
+    *   [data/produtos_financeiros.json](./data/produtos_financeiros.json)
+
 ---
 
-## Dicas Finais
+## 🚀 Como Executar a Solução
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+Siga os passos abaixo para rodar o Edu localmente:
+
+### 1. Pré-requisitos
+Certifique-se de possuir o Python (>= 3.8) e o [Ollama](https://ollama.com) instalados na sua máquina.
+
+### 2. Configurar o Modelo no Ollama
+Inicialize o serviço do Ollama e baixe o modelo configurado no código (`gpt-oss`):
+```bash
+# Baixar o modelo
+ollama pull gpt-oss
+```
+
+### 3. Instalar Dependências e Iniciar
+Na raiz do projeto, instale os pacotes requeridos e inicie o Streamlit:
+```bash
+# Instalar pacotes
+pip install streamlit pandas requests
+
+# Executar a aplicação
+streamlit run ./src/app.py
+```
+
+Acesse o endereço exibido no terminal (geralmente `http://localhost:8501`) para interagir com o Edu.
+
+---
+
+## 🛡️ Diretrizes de Segurança e Escopo
+
+Para garantir a confiabilidade e o escopo educativo:
+1. **Sem recomendações específicas**: Explica como produtos de investimento funcionam de maneira conceitual, mas nunca recomenda a compra ou venda de um ativo.
+2. **Escopo educativo restrito**: Se o usuário fizer perguntas fora do tema (como clima ou previsões de tempo), o Edu educadamente redireciona para finanças pessoais.
+3. **Privacidade**: Não solicita ou expõe senhas ou dados sigilosos.

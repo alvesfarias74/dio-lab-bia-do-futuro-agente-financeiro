@@ -4,8 +4,8 @@
 
 A avaliação pode ser feita de duas formas complementares:
 
-1. **Testes estruturados:** Você define perguntas e respostas esperadas;
-2. **Feedback real:** Pessoas testam o agente e dão notas.
+1. **Testes estruturados:** Definem-se perguntas e respostas esperadas;
+2. **Feedback real:** Testa-se o agente e atribuem-se notas.
 
 ---
 
@@ -29,22 +29,36 @@ Crie testes simples para validar seu agente:
 ### Teste 1: Consulta de gastos
 - **Pergunta:** "Quanto gastei com alimentação?"
 - **Resposta esperada:** Valor baseado no `transacoes.csv`
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 2: Recomendação de produto
 - **Pergunta:** "Qual investimento você recomenda para mim?"
 - **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 3: Pergunta fora do escopo
 - **Pergunta:** "Qual a previsão do tempo?"
 - **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 4: Informação inexistente
 - **Pergunta:** "Quanto rende o produto XYZ?"
 - **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [x] Correto  [ ] Incorreto
+
+---
+
+## Formulário de Feedback
+
+Use com os participantes do teste:
+
+| Métrica | Pergunta | Nota (1-5) |
+|---------|----------|------------|
+| Assertividade | "A resposta respondeu sua pergunta?" | ___ |
+| Segurança | "As informações pareceram confiáveis?" | ___ |
+| Coerência | "A linguagem foi clara e fácil de entender?" | ___ |
+
+**Comentário aberto:** O que poderia melhorar?
 
 ---
 
