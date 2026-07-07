@@ -47,6 +47,4 @@ No vídeo, demonstramos a interação fluida com o Edu em tempo real:
 
 ## Link do Vídeo
 
-> Cole aqui o link do seu pitch (YouTube, Loom, Google Drive, etc.)
-
-[Link do vídeo]
+> [Demonstração em vídeo do resultado da aplicação.](./src/Pitch.mp4)
