@@ -44,10 +44,8 @@ Para mais detalhes sobre a arquitetura e diretrizes de design do agente, consult
 │
 ├── 📁 src/                           # Código da aplicação
 │   ├── app.py                        # Protótipo Streamlit
+│   ├── image.png                     # Imagem do agente em funcionamento
 │   └── README.md                     # Guia de execução rápida e setup do Ollama
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
 │
 └── 📁 examples/                      # Referências e exemplos
     └── README.md
