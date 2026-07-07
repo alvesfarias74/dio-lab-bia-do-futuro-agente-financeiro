@@ -47,4 +47,4 @@ No vídeo, demonstramos a interação fluida com o Edu em tempo real:
 
 ## Link do Vídeo
 
-> [Demonstração em vídeo do resultado da aplicação.](.https://youtu.be/HW7tM3lNeeM)
+> [Demonstração em vídeo do resultado da aplicação.](https://youtu.be/HW7tM3lNeeM)
